@@ -1,0 +1,189 @@
+/* start globale variable */
+:root {
+  --main-color: #26a69a;
+  --main-text-co: #009688;
+  --white-color: #fff;
+  --main-transition: 0.4s;
+}
+/* end globale variable */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eee;
+}
+
+/* start scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6f6;
+  box-shadow: 0 0 2px #ddd inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0096889e;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color);
+}
+/* end scrollbar */
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.game .name {
+  background-color: var(--main-color);
+  border-bottom: 1px solid var(--white-color);
+}
+
+.game .drop-down {
+  min-height: 55px;
+  transition: var(--main-transition);
+}
+
+.game .drop-down .levels-box {
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.drop-down .drop-control {
+  max-width: 245px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.drop-down .drop-icon {
+  right: 5%;
+  top: 8px;
+  font-size: 20px;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.drop-down .drop-icon.open {
+  transition: var(--main-transition);
+  top: 16px;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+
+.game .drop-down .levels-list {
+  top: 50px;
+  max-width: 245px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border-radius: 10px;
+  max-height: 0px;
+  transition: var(--main-transition);
+  /* opacity: 0; */
+}
+
+.game .drop-down .levels-list .option {
+  transition: 0.2s;
+  background-color: var(--white-color);
+}
+
+.game .drop-down .levels-list .option:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.game .container .massage {
+  background-color: var(--white-color);
+}
+
+.game .container .massage > span::before {
+  content: "[ ";
+}
+
+.game .container .massage > span::after {
+  content: " ]";
+}
+
+.game .container .massage > .level,
+.game .container .massage > .seconds {
+  color: var(--main-text-co);
+}
+
+.game .container .start {
+  background-color: #009688;
+  transition: background-color var(--main-transition);
+}
+
+.game .container .start:hover {
+  background-color: #00897c;
+}
+
+.game .container .word {
+  color: var(--main-text-co);
+  font-size: 60px;
+  background-color: #ffffff61;
+  user-select: none;
+}
+
+@media (max-width: 576px) {
+  .game .container .word {
+    font-size: 41px;
+  }
+}
+
+.game .container .typing-inp {
+  outline: none;
+  caret-color: var(--main-text-co);
+}
+
+.game .container .typing-inp {
+  padding: 13px 10px;
+  font-family: inherit;
+  font-size: 14px;
+  border: 1px solid var(--main-color);
+  box-shadow: 0px 0px 0px 0px var(--main-color);
+  transition: var(--main-transition);
+}
+
+.game .container .typing-inp:focus {
+  transition: var(--main-transition);
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 5px #26a69aa1;
+}
+
+.game .container .typing-inp:focus::placeholder {
+  transition: var(--main-transition);
+  opacity: 0;
+}
+
+.game .container .upcoming-word {
+  background-color: var(--white-color);
+}
+
+.game .container .upcoming-word > .a-word {
+  background-color: var(--main-color);
+  user-select: none;
+}
+
+.game .container .statistics-info {
+  background: var(--white-color);
+}
+
+.game .container .statistics-info .time > span,
+.game .container .statistics-info .score > .got,
+.game .container .statistics-info .score > .total {
+  color: var(--main-text-co);
+}
+
+.instructions-info .instructions-title {
+  background-color: var(--main-color);
+}

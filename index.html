@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test Game</title>
+    <!-- Bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awsome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css style file -->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game w-100 text-center position-relative">
+      <div class="name py-3 mb-3 text-white fw-bold fs-4">
+        Typing Speed Test Game
+      </div>
+
+      <div
+        class="drop-down position-relative d-flex flex-column ms-sm-5 align-items-sm-start align-items-center ms-0"
+      >
+        <div class="drop-control position-relative w-100">
+          <input
+            type="text"
+            class="levels-box w-100 border-0 rounded-3 p-2 text-capitalize"
+            placeholder="Select Level..."
+            readonly
+          />
+          <i class="fa-solid fa-sort-down drop-icon position-absolute"></i>
+        </div>
+        <ul
+          class="levels-list mb-0 position-absolute w-100 list-unstyled text-start"
+        >
+          <li class="option p-2" data-level="easy">Easy</li>
+          <li class="option p-2" data-level="normal">Normal</li>
+          <li class="option p-2" data-level="difficult">Difficult</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="massage py-3 px-1 mb-4 rounded-3">
+          You Are Playing On
+          <span class="level text-capitalize"></span> Level & You Have
+          <span class="seconds text-capitalize"></span> Seconds To Type The word
+        </div>
+        <div class="start btn w-100 py-3 mb-3 text-white fs-5 fw-bold">
+          Start Game
+        </div>
+        <div class="word py-2 mb-3 fw-bold"></div>
+        <input
+          type="text"
+          placeholder="Write Here..."
+          class="typing-inp w-100 rounded-3 mb-4 text-center"
+        />
+        <div
+          class="upcoming-word text-white py-4 mb-3 d-flex flex-wrap align-items-center justify-content-center"
+        ></div>
+        <div
+          class="statistics-info d-flex align-items-center justify-content-between p-3 mb-1"
+        >
+          <div class="time">Time Left: <span></span> Seconds</div>
+          <div class="score">
+            Score: <span class="got"></span> From <span class="total"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- js file -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
